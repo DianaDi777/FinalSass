@@ -38,6 +38,8 @@
 .jumbotron {
 	@include backImage(
 		'../images/piramidesHorizontal_Bright.png',
+		// '../images/piramidesHorizontal_BrightSmall.jpg', 
+		// this picture could be used to make a website lighter and download it faster but it has worse quality
 
 		650px);
 	margin-top: 0;
@@ -46,7 +48,10 @@
 .cafedral {
 @include backImage(
 		'../images/cathedral_mexico5.png',
-		
+		//'../images/cathedral_mexico5Small.jpg',
+
+		// this picture could be used to make a website lighter and download it faster but it has worse quality
+
 		650px);
 margin-top: 0;
 	
