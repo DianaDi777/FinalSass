@@ -1,0 +1,49 @@
+$colorItemB: darken($blue, 20%);
+$colorMedia:  $blue;
+
+.media {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .item {
+    padding-bottom: 12px;
+    padding-top: 12px;
+    padding-left: 12px;
+    border-top: 3px dotted $colorItemB;
+    list-style-type: none;
+    &:hover {
+      background: transparentize($yellow, .3%);
+    }
+    &:last-of-type {
+      border-bottom: 3px dotted $colorItemB;
+    }
+    @include clearfix;
+  }
+
+
+
+  p {
+    margin: 0;
+    font-size: 2rem;
+  }
+}
+
+ .scale  {
+  img { 
+    
+      display: block;
+      border-radius: $roundedPic;
+      max-width: 100%;
+
+  }
+}
+/*
+.maya
+img { 
+    
+  max-width: 10%;
+  max-height: 10%;
+
+}
+*/ 

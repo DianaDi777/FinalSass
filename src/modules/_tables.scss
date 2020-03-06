@@ -1,0 +1,60 @@
+
+$color-even-cells: transparentize($yellow, .8);
+// built-in Sass functions example as required in assigment
+
+.table {
+  font-size: 1.5rem;
+  text-align: left;
+  width: 100%;
+
+  caption {
+    font-size: 2.5rem;
+    text-align: left;
+    padding-bottom: 5px;
+  }
+
+  > thead, > tbody, > tfoot {
+    > tr {
+
+  &:hover {
+        background-color: darken(adjust-hue($color-backgrounds, -20deg), 10%);
+        // modifing colors with sass as required in assigment
+      }
+
+  &:nth-child(even) {
+        background-color: $color-even-cells;
+
+  &:hover {
+          background-color: opacify($color-even-cells, .3);
+          // modifing colors with sass with built-in Sass functions as required in assigment
+        }
+      }
+      > th, > td {
+        padding: 10px;
+        border-bottom: 1px dotted $blue;
+      
+      }
+      > th {
+        color: transparentize($color: black, $amount: .5%); 
+        // modifing colors with sass and using buil-in function as required in assigment
+      }
+    }
+  }
+  >thead >tr {
+    background-color: $blue;
+    color: $color-backgrounds;
+    &:hover {
+      background-color: complement($blue);
+      // modifing colors with sass as required in assigment
+    }
+    >th {
+      border-bottom :0;
+      color: $black;
+    }
+  }
+}
+
+// >tbody >tr {
+//     >td {
+//       color: $red; }
+//   }

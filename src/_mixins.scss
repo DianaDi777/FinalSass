@@ -1,0 +1,73 @@
+
+// -----------------this mixin helps to build a jumbotron area with background image-------//
+@mixin backImage($image,
+  $height: 100%,
+  $bPosition: center center) 
+   {
+  background: 
+  url($image);
+  background-repeat: no-repeat;
+  background-position: $bPosition;
+  background-size: cover;
+  height: $height;
+   } 
+// -----------------------------------------------------------------------------------//
+
+
+//___________helps to deal with float and do 'clear' after float items-------------------------//
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: '';
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+} 
+// used in firstpage.html for image grid and also in navigation on all pages
+// -----------------------------------------------------------------------------------//
+
+
+
+// ------------------------this mixin creates image grid on a first page------------------------//
+
+@mixin imagegrid($qty, $margin) {
+  //here I'm using math operation to create a grid of images as required in assigment 
+ 
+  width: ((100% - (($qty - 1) * $margin))/$qty);
+  &:nth-child(n) 
+  {
+    margin-right: $margin;
+    margin-bottom: $margin;
+  }
+  &:nth-child(#{$qty}n) 
+  {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+}
+// -----------------------------------------------------------------------------------//
+
+
+
+
+// ------------------mixin for media queries and how it looks on different size screens--------//
+
+
+@mixin break($list...) 
+// 3 dots - it means it will accept a series of values
+{
+  @if length($list) == 1 {
+    @media (min-width: nth($list, 1)) {
+      @content;
+    }
+  } @else {
+    @media (min-width: nth($list, 1))
+      and (max-width: nth($list, 2)) {
+      @content;
+    } 
+  }
+}
+//i incuded it in footer navigation. It allow us to set a rule in _navigation for footer navigation disapear when screen becomes a mobile size; also used to make a logo disappear on modile screen
+// -----------------------------------------------------------------------------------//

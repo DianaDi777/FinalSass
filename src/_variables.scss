@@ -1,0 +1,34 @@
+
+@import url('https://fonts.googleapis.com/css?family=Assistant:400,600,700,800|Fjalla+One&display=swap');
+
+
+
+
+// In this project I use two fonts : font-family: 'Fjalla One',  font-family: 'Assistant'
+
+
+$font-main:'Assistant', Helvetica, sans-serif; //this is list of elements
+$font-highlight: 'Fjalla One', Helvetica, sans-serif;
+
+
+    $white:    white;
+    $cream:    #f7f7f7;
+    $gray:      #d7d7d7;
+    $darkgray: #9f9f9f;
+        $black:     black;
+    $yellow:      rgb(247, 213, 121);
+    $blue:          #6ec4db;
+    $green:       #66ab8c;
+    $orange:      #Fff7c0;
+    $red:           #fa7c92;
+    $purple:      #6D73C2;
+
+
+
+$color-main: $white;
+$color-backgrounds: $cream;
+$color-headlines: $red;
+$color-footer-li: $gray;
+$body-font: $black;
+
+

@@ -1,0 +1,78 @@
+nav {
+	header & {
+		background-color: darken($blue, 15%);
+		// modifing colors with sass as required in assigment
+											
+		// May be add in a future - border-bottom: 3px solid darken($blue, 30%);
+
+		
+	}
+
+	.logo {
+			
+			float: left;
+			display: none;
+			padding: 0;
+			margin: 0;
+			@include break(1000px) { // this rule makes a logo dissapear on a mobile screen and appear when it's 1000px and more
+			display: block;
+		}
+		a {
+			padding: 0;
+			margin: 0;
+		}
+		img {
+			padding: 0;
+			margin: 0;
+		}
+	}
+
+
+ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		@include clearfix;
+	}
+ul li {
+		@include break(760px) {
+			float: right;
+		}
+		padding: 10px 5px;
+	}
+
+ul li a {
+		text-decoration: none;
+		padding: 10px 5px;
+		color: $color-backgrounds;
+
+		&:hover {			
+			color: $yellow;
+		}
+
+	header &:hover {
+			background-color: $color-footer-li;
+			color: $body-font;
+			
+		}
+
+	footer & {
+			color: $body-font;
+		}
+	footer &:hover {
+			color:  darken($blue, 30%);
+			// modifing colors with sass as required in assigment
+		}
+	}
+	footer & {
+		margin-top:20px;
+		min-height: 200px;
+		background-color: $color-footer-li;
+
+		@include break(0, 500px) {
+			display: none;
+		}//makes a footer menu disappear when screen gots smaller(mobile)
+		
+	}
+}
+
