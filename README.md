@@ -1,2 +1,2 @@
 # FinalSass
-Final Assignment for Sass
+Final Assignment for Sass Class
